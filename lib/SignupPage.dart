@@ -59,7 +59,7 @@ class SignUpScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pushNamed("/");
                 },
-                child: Text("Sign In"),
+                child: Text("Sign Up"),
                 style: ElevatedButton.styleFrom(
                     primary: consPrimaryColor,
                     shape: RoundedRectangleBorder(
