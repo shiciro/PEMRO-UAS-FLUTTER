@@ -7,6 +7,7 @@ import 'package:widget/ProfilePage.dart';
 import 'package:widget/SignupPage.dart';
 import 'package:widget/constants.dart';
 import 'package:widget/providers/global.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'CartPage.dart';
 
@@ -14,7 +15,11 @@ import 'CartPage.dart';
 //  runApp(MyApp());
 //}
 
-void main() {
+void main() async {
+  //library firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  // init firebase
+  await Firebase.initializeApp();
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => Database()),
