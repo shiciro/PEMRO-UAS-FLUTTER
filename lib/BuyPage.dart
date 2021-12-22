@@ -99,7 +99,7 @@ class _BuyPageState extends State<BuyPage> {
                 onPressed: () {
                   Navigator.of(context).pushNamed("homePage");
                 },
-                child: Text("Shop Now"),
+                child: Text("Add to Cart"),
                 style: ElevatedButton.styleFrom(
                     primary: consPrimaryColor,
                     shape: RoundedRectangleBorder(

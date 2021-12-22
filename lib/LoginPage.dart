@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'components/rounded_input_field.dart';
 import 'components/rounded_password_field.dart';
 import 'constants.dart';
+import 'providers/global.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -36,6 +38,7 @@ class LoginPage extends StatelessWidget {
           child: ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed("homePage");
+                _loadListQuantity();
               },
               child: Text("Sign In"),
               style: ElevatedButton.styleFrom(
@@ -64,5 +67,11 @@ class LoginPage extends StatelessWidget {
         )
       ]),
     );
+  }
+
+  void _loadListQuantity() async {
+    var cachedListQuantity = FirebaseFirestore.instance.collection('testList');
+    cachedListQuantity.get();
+    debugPrint(cachedListQuantity.toString());
   }
 }

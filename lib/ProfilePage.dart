@@ -1,6 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
 import 'constants.dart';
+import 'providers/transferVariables.dart' as global;
+import 'providers/global.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -39,6 +43,7 @@ class ProfilePage extends StatelessWidget {
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed("/");
+                  saveListQuantity();
                 },
                 child: Text("Log Out"),
                 style: ElevatedButton.styleFrom(
@@ -49,5 +54,10 @@ class ProfilePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void saveListQuantity() async {
+    var cachedListQuantity = FirebaseFirestore.instance.collection('testList');
+    cachedListQuantity.add({'listQuantity': global.cachedQuantity});
   }
 }

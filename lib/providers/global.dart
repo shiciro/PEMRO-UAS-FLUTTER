@@ -2,6 +2,7 @@ library my_project.global;
 
 import 'package:flutter/material.dart';
 import 'transferVariables.dart' as global;
+import 'package:widget/LoginPage.dart';
 
 // set default values for the initial run
 class Database with ChangeNotifier {
@@ -40,6 +41,7 @@ class Database with ChangeNotifier {
   void increment() {
     {
       listQuantity[global.Q]++;
+      global.cachedQuantity[global.Q]++;
       notifyListeners();
     }
   }
@@ -48,6 +50,7 @@ class Database with ChangeNotifier {
     if (listQuantity[global.Q] > 0) {
       {
         listQuantity[global.Q]--;
+        global.cachedQuantity[global.Q]--;
         notifyListeners();
       }
     }

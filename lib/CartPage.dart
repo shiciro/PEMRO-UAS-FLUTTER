@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:widget/constants.dart';
 import 'package:provider/provider.dart';
@@ -137,7 +138,9 @@ class _CartPageState extends State<CartPage> {
           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 90),
           padding: EdgeInsets.symmetric(vertical: 20),
           child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                saveListQuantity();
+              },
               child: Text("Check Out"),
               style: ElevatedButton.styleFrom(
                   primary: consPrimaryColor,
@@ -146,5 +149,10 @@ class _CartPageState extends State<CartPage> {
         ),
       ]),
     );
+  }
+
+  void saveListQuantity() async {
+    var cachedListQuantity = FirebaseFirestore.instance.collection('testList');
+    cachedListQuantity.add({'listQuantity': global.cachedQuantity});
   }
 }

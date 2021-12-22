@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   global.Q = i;
                                   Navigator.of(context).pushNamed("buyPage");
                                 },
-                                child: Text('Shop Now'),
+                                child: Text('Buy'),
                                 style: ElevatedButton.styleFrom(
                                   primary: consPrimaryColor,
                                 )),
