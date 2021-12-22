@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/shiciro/GameStyle/BuildConfig.java
+ com.shiciro.GameStyle.BuildConfig

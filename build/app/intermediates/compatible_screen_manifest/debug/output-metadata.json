@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.hilmy.GameStyle",
+  "applicationId": "com.shiciro.GameStyle",
   "variantName": "debug",
   "elements": []
 }

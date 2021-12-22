@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gamestyle">
+    package="com.shiciro.GameStyle">
    <application
         android:label="GameStyle"
         android:icon="@mipmap/ic_launcher">

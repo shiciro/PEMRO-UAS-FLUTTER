@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">9404506471-4obv53c5pdbe7s6js0ua0nms18k341lv.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">9404506471</string>
+    <string name="google_api_key" translatable="false">AIzaSyDQM91a1TOn6Jbd9bRXJaGlFw2pvdr7A4Y</string>
+    <string name="google_app_id" translatable="false">1:9404506471:android:6dae3f34698548519acfc2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDQM91a1TOn6Jbd9bRXJaGlFw2pvdr7A4Y</string>
+    <string name="google_storage_bucket" translatable="false">uts-pemro.appspot.com</string>
+    <string name="project_id" translatable="false">uts-pemro</string>
+</resources>

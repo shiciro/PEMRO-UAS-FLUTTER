@@ -41,13 +41,18 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.hilmy.GameStyle"
-        minSdkVersion 16
+        applicationId "com.shiciro.GameStyle"
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-    }
+        multiDexEnabled true
 
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     signingConfigs {
        release {
            keyAlias keystoreProperties['keyAlias']
@@ -73,7 +78,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation platform('com.google.firebase:firebase-bom:29.0.0')
     implementation 'com.google.firebase:firebase-analytics'
-    
+    implementation 'com.android.support:multidex:1.0.3'
 }
 
     
