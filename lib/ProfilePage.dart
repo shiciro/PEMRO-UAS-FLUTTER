@@ -57,7 +57,7 @@ class ProfilePage extends StatelessWidget {
   }
 
   void saveListQuantity() async {
-    var cachedListQuantity = FirebaseFirestore.instance.collection('testList');
-    cachedListQuantity.add({'listQuantity': global.cachedQuantity});
+    var firebaseConn = FirebaseFirestore.instance.collection('testList');
+    firebaseConn.add({'listQuantity': global.cachedQuantity});
   }
 }

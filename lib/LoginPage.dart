@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'components/rounded_input_field.dart';
 import 'components/rounded_password_field.dart';
 import 'constants.dart';
+import 'package:provider/provider.dart';
+import 'providers/transferVariables.dart' as global;
 import 'providers/global.dart';
 
 class LoginPage extends StatelessWidget {
@@ -70,8 +72,9 @@ class LoginPage extends StatelessWidget {
   }
 
   void _loadListQuantity() async {
-    var cachedListQuantity = FirebaseFirestore.instance.collection('testList');
-    cachedListQuantity.get();
-    debugPrint(cachedListQuantity.toString());
+    var firebaseConn = FirebaseFirestore.instance.collection('testList');
+    //global.cachedQuantity = await firebaseConn.get();
+
+    //firebaseConn.get({""});
   }
 }
